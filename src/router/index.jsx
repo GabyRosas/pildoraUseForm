@@ -5,13 +5,14 @@ import Contact from "../pages/Contact";
 import Layout from "../layout/Layout";
 import RefundForm from "../pages/RefundForm";
 
+
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout/>,
         children: [
             {
-                path: "/home",
+                path: "/",
                 element: <Home/>
             },
          
@@ -27,6 +28,12 @@ export const router = createBrowserRouter([
                 path: "/refund",
                 element: <RefundForm/>
         },
+        {
+            path: "/refund",
+            element: <RefundForm/>
+    },
+        
+       
     ]
 },
 ])

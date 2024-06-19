@@ -1,7 +1,8 @@
+
 const Home = () => {
     return (
         <>
-            <h1>Home page</h1>
+            <h1>Utilisación de UseForm</h1>
         </>
     )
 }

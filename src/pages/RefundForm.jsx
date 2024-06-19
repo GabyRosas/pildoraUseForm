@@ -4,10 +4,33 @@ import { useForm } from 'react-hook-form';
 const RefundForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = data => {
+  /*const onSubmit = data => {
     console.log(data);
     // Recup de la data
     alert('Formulario enviado con éxito');
+  };*/
+
+ const onSubmit = async (data) => {
+    try {
+      const response = await fetch('http://localhost:5000/refunds', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al enviar el formulario');
+      }
+
+      const responseData = await response.json();
+      console.log('Formulario enviado con éxito', responseData);
+      alert('Formulario enviado con éxito');
+    } catch (error) {
+      console.error('Error al enviar el formulario', error);
+      alert('Hubo un error al enviar el formulario');
+    }
   };
 
   return (
