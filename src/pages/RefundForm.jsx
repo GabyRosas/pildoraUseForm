@@ -57,7 +57,7 @@ const RefundForm = () => {
         {errors.reason && <p>{errors.reason.message}</p>}
       </div>
 
-      <button  className={`block bg-[color:var(--col-primary)] text-[white] w-[280px] h-[50px] text-base cursor-pointer rounded-[10px] border-[none] transition-opacity duration-[0.3s] ease-[ease] hover:opacity-80`} type="submit">Enviar Solicitud de Reembolso</button>
+      <button  className={`block bg-[color:var(--col-primary)] text-[white] w-[250px] h-[35px] text-base cursor-pointer rounded-[10px] border-[none] transition-opacity duration-[0.3s] ease-[ease] hover:opacity-80`} type="submit">Enviar Solicitud de Reembolso</button>
     </form>
   );
 };
