@@ -16,22 +16,22 @@ export const router = createBrowserRouter([
                 element: <Home/>
             },
          
-        {
+            {
                  path: "/about",
                 element: <About/>
-        },
-        {
+             },
+             {
                 path: "/contact",
                 element: <Contact/>
-        },
-        {
+            },
+             {
                 path: "/refund",
                 element: <RefundForm/>
-        },
-        {
-            path: "/refund",
-            element: <RefundForm/>
-    },
+             },
+             {
+                path: "/refund",
+                element: <RefundForm/>
+             },
         
        
     ]
